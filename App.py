@@ -1,5 +1,6 @@
 import os 
 import Player
+import Enemy
 
 player = Player
 
@@ -21,6 +22,7 @@ def get_input():
 
   return input("Choose an action")
 
+# MAIN #
 choice = ''
 display_title_bar()
 
@@ -28,10 +30,14 @@ while choice != 'q':
 
   choice = get_input()
 
-  # REspond to user input
+  # Respond to user input
   display_title_bar()
   if choice == "1":
-    print("\nAttack!\n")
+    
+    playerDamage = Player.dealDamage()
+    print("You attack enemy for " + str(playerDamage) + " damage")
+    Enemy.takeDamage(playerDamage)
+
   elif choice == "2":
     print("\nFlee.\n")
   elif choice == "q":
