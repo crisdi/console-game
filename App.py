@@ -39,8 +39,13 @@ while choice != 'q':
     Enemy.takeDamage(playerDamage)
 
   elif choice == "2":
+
     print("\nFlee.\n")
+
   elif choice == "q":
-    print("\nThanks for playing, bye!")
+
+    print("\nThanks for playing!")
+
   else:
+    
     print("\nWrong input.")
